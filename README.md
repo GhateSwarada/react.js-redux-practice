@@ -1,46 +1,100 @@
-# Getting Started with Create React App and Redux
+🌿 FreshBreez Plant Store
+Welcome to the FreshBreez Plant Store! This is a single-page e-commerce application built with React and Redux, designed to simulate an online plant shopping experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project serves as the final assignment for the "Development with React" IBM course on Coursera.
 
-## Available Scripts
+Features & Functionality
+The application provides a comprehensive shopping experience, covering all assignment requirements:
 
-In the project directory, you can run:
+Landing Page: A welcoming introduction to FreshBreez, featuring a background image, company description, and a "Get Started" button to navigate to products.
 
-### `npm start`
+Product Listing Page:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Showcases six unique houseplants with their images, names, and prices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Plants are organized into three distinct categories (Original Plants, Flower Plants, Fake Plants) with interactive filtering buttons.
 
-### `npm test`
+"Add to Cart" buttons for each plant dynamically update the cart icon count in the header, disable themselves upon selection, and add the item to the Redux store.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Global Header:
 
-### `npm run build`
+Persistently displayed across product and cart pages.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Features a dynamic shopping cart icon that reflects the total number of items in the cart.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Includes clear navigation links to Home, Products, and Shopping Cart pages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Shopping Cart Page:
 
-### `npm run eject`
+Displays the total number of items and the total cost of all plants in the cart.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each plant type in the cart shows its thumbnail, name, and unit price.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Provides "Increase", "Decrease", and "Delete" buttons for managing item quantities and removal, with all totals updating in real-time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Includes "Checkout" (displays "Coming Soon!") and "Continue Shopping" buttons.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Redux State Management: The entire application leverages Redux Toolkit for robust and predictable state management of the shopping cart and product interactions.
 
-## Learn More
+Public GitHub Repository: This repository is publicly accessible for review.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Technologies Used
+React: Frontend library for UI development.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Redux Toolkit: Official Redux toolset for state management.
+
+React Router DOM: For client-side routing.
+
+CSS Modules: For component-scoped styling.
+
+JavaScript (ES6+)
+
+Getting Started
+Follow these steps to set up and run the project locally:
+
+Clone the repository:
+
+git clone https://github.com/GhateSwarada/react.js-redux-practice.git
+cd react.js-redux-practice
+
+
+Install dependencies:
+
+npm install
+
+(If you encounter peer dependency errors, try npm install --legacy-peer-deps.)
+
+Run the application:
+
+npm start
+
+The application will open in your browser at http://localhost:3000.
+
+Project Structure Overview
+The project is organized into logical folders:
+
+src/assets/: Contains all images (plant thumbnails, background).
+
+src/components/: Reusable UI components (e.g., Header, PlantCard).
+
+src/components/: Top-level page components (e.g., LandingPage, ProductListingPage, ShoppingCartPage).
+
+src/redux/: Redux store configuration and cartSlice for state management.
+
+src/utils/: Helper data like plantData.js.
+
+src/App.js: Main application component handling routing.
+
+Deployment
+To create a production-ready build of the application:
+
+npm run build
+
+The optimized build will be generated in the build/ directory, ready for deployment to platforms like Netlify, Vercel, or GitHub Pages.
+
+Contact
+For any questions or feedback regarding this project, please feel free to reach out.
+
+Your Name: Swarada Ghate
+
+GitHub: https://github.com/GhateSwarada
