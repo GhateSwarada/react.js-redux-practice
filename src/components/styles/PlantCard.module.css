@@ -1,0 +1,90 @@
+/* src/components/PlantCard/styles/PlantCard.module.css */
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content and button to ends */
+    align-items: center; /* Centers items horizontally within the card */
+    min-height: 350px; /* Adjust as needed */
+}
+
+.image {
+    height: 200px; /* Adjusted height for better card fit */
+    width: 150px;
+    object-fit: cover; /* Ensures image covers area without distorting */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4CAF50; /* A nice green for price */
+    margin-bottom: 20px; /* Space between price and button */
+}
+
+
+/* --- Add to Cart Button Styles --- */
+
+.addButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%; /* Make button take full width of card */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.addButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.addButton:active {
+    transform: translateY(0); /* Press down effect */
+}
+
+/* --- Disabled Button Styles --- */
+
+.disabledButton {
+    background-color: #cccccc; /* Greyed out */
+    color: #666666; /* Darker text */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed; /* Indicates it's not clickable */
+    font-size: 1em;
+    font-weight: 600;
+    width: 100%;
+    box-sizing: border-box;
+    pointer-events: none; /* Prevents click events entirely on the disabled button */
+}
+
+/* You might want to adjust the overall card width in your ProductListingPage.module.css */
+/* Example in ProductListingPage.module.css's .plantGrid */
+/*
+.plantGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); // Adjust minmax for card width
+    gap: 20px;
+    justify-items: center;
+}
+*/

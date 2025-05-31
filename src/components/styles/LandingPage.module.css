@@ -1,0 +1,52 @@
+.main{
+   background-image: url('../../assets/images/background.png'); /* Relative path to your image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;      /* Scales the image to cover the entire element */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; 
+  height: 695px;
+  display: flex; /* Make the main container a flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; 
+}
+
+.nav{
+    position: fixed;
+}
+
+.content{
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px; /* Limit width for better readability */
+    display: flex;       /* Make content a flex container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center text and button horizontally within content */
+    gap: 20px; /* Add space between elements */
+}
+
+.header{
+    color: #478b2a;
+    font-weight: bolder;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.btn{
+    padding: 12px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.para{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}

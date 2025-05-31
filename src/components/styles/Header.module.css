@@ -1,0 +1,51 @@
+.mainBar{
+    background-color: white;
+    height: 70px;
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+    width: 1550px;
+}
+
+.title{
+    font-size: x-large;
+    color: #478b2a;
+    font-weight: bolder;
+    padding-top: 4px;
+    float: left;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    float: right;
+    padding-top: 13px;
+    margin-right: 20px;
+}
+
+.cartIcon{
+    display: flex;
+    gap: 3px;
+}
+
+.cart{
+    height: 25px;
+}
+
+.cartIcon p{
+    margin-top: 2px;
+}
+
+.navItem .pageLink{
+    text-decoration: none;
+    color: black;
+}
+.navItem .cartLink{
+    text-decoration: none;
+    color: black;
+}
+
+.navItem{
+    font-size: larger;
+}

@@ -1,0 +1,214 @@
+/* src/pages/ShoppingCartPage/styles/ShoppingCartPage.module.css */
+
+.shoppingCartPage {
+    padding: 30px 20px; /* Top/bottom padding, left/right padding */
+    max-width: 900px; /* Max width for the cart content */
+    margin: 20px auto; /* Center the cart page content horizontally */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shoppingCartPage h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.shoppingCartPage > p { /* Styles for "Total Items" and "Total Cost" */
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.shoppingCartPage > p:last-of-type { /* For the total cost */
+    font-size: 1.3em;
+    color: #4CAF50; /* Green for total cost */
+    margin-bottom: 30px;
+}
+
+/* --- Empty Cart Message --- */
+.shoppingCartPage p:first-of-type { /* Style for "Your cart is empty." */
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 50px;
+}
+
+.shoppingCartPage p:first-of-type a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.shoppingCartPage p:first-of-type a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Cart Items Container --- */
+.cartItemsContainer {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image, details, and actions */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee; /* Separator for each item */
+}
+
+.cartItem:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.itemImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.itemDetails {
+    flex-grow: 1; /* Allows details to take available space */
+    text-align: left; /* Align text left within its section */
+}
+
+.itemDetails h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 5px 0; /* Remove default margins */
+}
+
+.itemDetails p {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0; /* Remove default margins */
+}
+
+.itemDetails p:last-of-type { /* Subtotal */
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 5px;
+}
+
+.itemActions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between action buttons */
+    flex-shrink: 0; /* Prevent actions from shrinking */
+}
+
+.actionButton {
+    background-color: #007bff; /* Blue for quantity buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+    background-color: #0056b3;
+}
+
+.deleteButton {
+    background-color: #dc3545; /* Red for delete button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9em; /* Slightly smaller font for "Delete" */
+    transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+
+/* --- Cart Actions (Checkout/Continue Shopping) --- */
+.cartActions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 20px; /* Space between the two action buttons */
+    margin-top: 40px; /* Space above buttons */
+}
+
+.checkoutButton,
+.continueShoppingButton {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* For the Link component */
+    display: inline-block; /* For the Link component */
+    text-align: center; /* For the Link component */
+}
+
+.checkoutButton {
+    background-color: #4CAF50; /* Green for checkout */
+    color: white;
+}
+
+.checkoutButton:hover {
+    background-color: #45a049;
+}
+
+.continueShoppingButton {
+    background-color: #f0f0f0; /* Light grey for continue shopping */
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.continueShoppingButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .shoppingCartPage {
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+
+    .cartItem {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align details to the left */
+        padding-bottom: 10px;
+    }
+
+    .itemImage {
+        margin-bottom: 10px; /* Space below image when stacked */
+    }
+
+    .itemDetails {
+        width: 100%; /* Take full width when stacked */
+        text-align: left;
+    }
+
+    .itemActions {
+        width: 100%; /* Take full width when stacked */
+        justify-content: center; /* Center buttons horizontally when stacked */
+        margin-top: 15px;
+    }
+
+    .cartActions {
+        flex-direction: column; /* Stack action buttons vertically */
+        align-items: stretch; /* Stretch buttons to full width */
+        gap: 15px;
+    }
+}
